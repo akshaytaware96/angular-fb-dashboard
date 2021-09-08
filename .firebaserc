@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "dashboard1-64679": {
+      "hosting": {
+        "angular-firebase-dashboard": [
+          "dashboard1-64679"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "dashboard1-64679"
+  }
+}
