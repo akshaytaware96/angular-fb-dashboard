@@ -7,15 +7,24 @@
                 <img src="../../../assets/senwell_logo.png" alt="company" class="img-fluid"/>
              </div>
              <div class="col-md-12 border-top pb-1"></div>
-             <form > 
+             <form [formGroup]="loginForm" (ngSubmit)="submit()"> 
                 <div class="form-group mt-3 text-center">
               
-                   <input type="text" class="form-control text-center" placeholder="User Name"
-                   >
+                   <input type="text" class="form-control text-center" formControlName="username" placeholder="User Name">
+                   <div *ngIf="f.username.touched && f.username.invalid" class="alert alert-danger">
+                     User Name is Required
+                 </div>
+           
+                   <!-- <div *ngIf="f.username.errors.required">Username is required</div> -->
+                   
                 </div>
                 <div class="form-group mt-2 text-center">
                
-                   <input type="password" class="form-control text-center" placeholder="Password">
+                   <input type="password" class="form-control text-center" formControlName="password"  placeholder="Password">
+                   <div *ngIf="f.password.touched && f.password.invalid" class="alert alert-danger">
+                     Password is Required
+                 </div>
+
                 </div>
                 <div class="col-md-12 pb-2 pt-2"><span class="divdercustom"></span></div>
                 <button id="form__login__btn" type="submit" class="btn btn-primary btn-blueCustom w-100">Login</button>
