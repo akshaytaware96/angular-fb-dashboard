@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {FormsModule,ReactiveFormsModule} from '@angular/forms';
+import {FormGroup, FormsModule,ReactiveFormsModule} from '@angular/forms';
 import{HttpClientModule} from '@angular/common/http';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatBadgeModule} from '@angular/material/badge';
@@ -37,14 +37,21 @@ import {AngularFirestoreModule} from '@angular/fire/firestore';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './module/login/login.component';
 import { HomeComponent } from './module/home/home.component';
-
+import { ServiceComponent } from './service/service.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    ServiceComponent,
+    AboutComponent,
+    ContactComponent,
+    ForgotpasswordComponent
   ],
   imports: [
     BrowserModule,
@@ -80,9 +87,7 @@ import { HomeComponent } from './module/home/home.component';
    AngularFireModule.initializeApp(environment.firebase),
    AngularFireDatabaseModule,
    AngularFirestoreModule,
-   NgbModule
-
-  ],
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
