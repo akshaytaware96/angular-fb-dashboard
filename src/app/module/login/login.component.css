@@ -77,7 +77,13 @@
   @media screen and (max-width: 480px) {
     .loginFormCustom, .bg-secondimage{
       width: 100%;
+      margin-top: 822px;
+      float: none;
+      top: 0;
+      right: auto;
+      left: 0;
     }
+ 
     .secondhalf{ display: none;}
     #form__forgot__pwd__btn,#google__login__btn, #form__login__btn{
       margin-left: 0 !important;
@@ -92,9 +98,16 @@
   /*All Mobile devices supported for Landscape view */
   @media screen and (min-width: 481px) and (max-width:767px){
     .loginFormCustom{
-      width:65%; 
-      margin: 0 auto;
+      width:100%; 
+      margin-top: 640px;
       float: none;
+      top: 0;
+      right: auto;
+      left: 0;
+    }
+
+    .font-weight-bold h1{
+      font-size: 22px;
     }
     .secondhalf{ display: none;}
     .bg-blurimage{
@@ -114,10 +127,21 @@
       box-shadow: none;
     }
     .loginFormCustom{
-      width:50%; 
+      width:80%; 
       margin: 0 auto;
+    margin-top: 980px;
       float: none;
+      /* top: 0;
+      /* right: auto; */
+      left: 0; 
     }
+    h1[_ngcontent-dsc-c106] {
+      font: 398 24px/32px Roboto, "Helvetica Neue", sans-serif;
+      letter-spacing: normal;
+      margin: 0 0 16px;
+      font-size: 63px;
+      text-shadow: 1px 1px 30px black;
+  }
   }
 
   @media screen and (max-width: 450px) {
@@ -138,4 +162,15 @@
     }
 
    
+  }
+
+  @media screen and (min-width: 767px) and (max-width:992px){
+    .loginFormCustom{
+      width:100%; 
+      margin-top: 695px;
+      float: none;
+      top: 0;
+      right: auto;
+      left: 0;
+    }
   }
